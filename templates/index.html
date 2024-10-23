@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(206, 226, 206);
+            display: flex;
+            
+      
+        }
+        h1{
+            font-family: cursive;
+            
+        }
+        .inputs{
+            text-align: center;
+            background-color: rgb(137, 155, 137);
+            padding: 10px;
+            border-radius: 30px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            width: 300px;
+
+        }
+        label {
+            display: block;
+            text-align: left;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .prediction_result{
+            font-family: 'Courier New';
+            margin-top: 20px;
+            font-size: 24px;
+            font-weight: bolder;
+            color: #333;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing:border-box;
+        }
+        input[type="submit"]:hover {
+            background-color: #6a726a;
+        }
+        
+    </style>
+</head>
+<body>
+   
+    <div class="inputs">
+        <h1>GREEN MEADOWS</h1>
+        <form action="/predict" method="post">
+            <form action="/predict" method="post">
+                <label for="N">Nitrogen (N):</label>
+                <input type="text" id="N" name="N">
+    
+                <label for="P">Phosphorus (P):</label>
+                <input type="text" id="P" name="P">
+    
+                <label for="K">Potassium (K):</label>
+                <input type="text" id="K" name="K">
+    
+                <label for="temperature">Temperature (°C):</label>
+                <input type="text" id="temperature" name="temperature">
+    
+                <label for="humidity">Humidity (%):</label>
+                <input type="text" id="humidity" name="humidity">
+    
+                <label for="ph">pH Level:</label>
+                <input type="text" id="ph" name="ph">
+    
+                <label for="rainfall">Rainfall (mm):</label>
+                <input type="text" id="rainfall" name="rainfall">
+    
+                <input type="submit" value="Submit">
+        </form>
+    </div>
+    <div class="prediction_result">
+    <h2>{{prediction_text}}</h2>
+</div>
+</body>
+</html>
